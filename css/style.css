@@ -1,3 +1,11 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
 :root {
     --gray: #EDEDE9;
     --light-brown: #E3D5CA;
@@ -5,3 +13,4 @@
     --warm-brown: #D5BDAF;
     --dark-brown: #D6CCC2;
 }
+
