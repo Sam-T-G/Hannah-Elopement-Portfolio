@@ -12,6 +12,7 @@
     --brown: #E3D5CA;
     --warm-brown: #D5BDAF;
     --dark-brown: #D6CCC2;
+    --charcoal: #2d2d2d;
 }
 
 body {
@@ -50,8 +51,7 @@ header div {
     justify-content: center;
     margin-right: 20vw;
     margin-left: 20vw;
-    font-size: 1.2rem;
-    
+    font-size: 1.2rem; 
 }
 
 header div ul {
@@ -71,7 +71,7 @@ a {
     color: var(--off-white);
     text-decoration: none;
     &:hover {
-        color: #ffffff;
+        color: #0c0c0c;
     }
 }
 
@@ -100,7 +100,46 @@ header p {
     height: 80px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: var(--gray);
-    color: #ffffff;
+    color: var(--charcoal);
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
 }
 
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.gallery-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gallery {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Enables momentum scrolling in iOS Safari */
+}
+
+.gallery-item {
+    flex: 0 0 100vw; /* Adjust the width of each item to the viewport width */
+    scroll-snap-align: start;
+    box-sizing: border-box;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd; /* Optional: Add border for images */
+    border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: Add box-shadow for a subtle effect */
+}
+
+/* Optional: Hide horizontal scrollbar */
+.gallery::-webkit-scrollbar {
+    display: none;
+}
